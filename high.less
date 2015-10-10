@@ -5,19 +5,15 @@
 @mobile: 600px;
 @desktop: 993px;
 
-@media-mobile: ~"only screen and (max-width : @{mobile})";
-@media-tablet: ~"only screen and (min-width: @{mobile}) and (max-width: @{desktop})";
-@media-desktop: ~"only screen and (min-width : @{desktop})";
+@small-max: @mobile;
+@medium-min: (@mobile + 1);
+@medium-max: (@desktop - 1);
+@desktop-min: @desktop;
 
-body {
-  background-color: red;
-}
 
-@media @media-mobile {
-  body {
-    background-color: green;
-  }
-}
+@media-mobile: ~"only screen and (max-width : @{small-max})";
+@media-tablet: ~"only screen and (min-width: @{medium-min}) and (max-width: @{medium-max})";
+@media-desktop: ~"only screen and (min-width : @{desktop-min})";
 
 body {
   background-color: hsl(0, 80%, 90%);
