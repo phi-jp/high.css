@@ -1,17 +1,20 @@
 
 var gulp = require('gulp');
 var less = require('gulp-less');
+var rename = require("gulp-rename"); 
+var cssmin = require('gulp-cssmin');
 
 gulp.task('less', function() {
   gulp
-    .src(['high.less'])
+    .src(['src/index.less'])
     .pipe(less())
+    .pipe(rename('high.css'))
     .pipe(gulp.dest('./'))
     ;
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['*.less'], ['less']);
+  gulp.watch(['src/**/*.less'], ['less']);
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['less', 'watch']);

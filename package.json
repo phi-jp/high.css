@@ -2,7 +2,9 @@
   "name": "high.css",
   "version": "0.0.1",
   "dependencies": {
-    "gulp": "^3.9.0",
-    "gulp-less": "^3.0.3"
+    "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-less": "^3.1.0",
+    "gulp-rename": "^1.2.2"
   }
 }
