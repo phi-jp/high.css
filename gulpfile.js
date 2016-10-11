@@ -10,6 +10,11 @@ gulp.task('less', function() {
     .pipe(less())
     .pipe(rename('high.css'))
     .pipe(gulp.dest('./'))
+    .pipe(cssmin())
+    .pipe(rename({
+      extname: '.min.js'
+    }))
+    .pipe(gulp.dest('./'))
     ;
 });
 
