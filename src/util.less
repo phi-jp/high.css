@@ -1,0 +1,37 @@
+/*
+ * util
+ */
+
+
+
+/*
+ * media
+ */
+@mobile: 600px;
+@desktop: 993px;
+
+@small-max: @mobile;
+@medium-min: (@mobile + 1);
+@medium-max: (@desktop - 1);
+@desktop-min: @desktop;
+
+@media-mobile: ~"only screen and (max-width : @{small-max})";
+@media-tablet: ~"only screen and (min-width: @{medium-min}) and (max-width: @{medium-max})";
+@media-desktop: ~"only screen and (min-width : @{desktop-min})";
+
+
+
+/*
+ * method
+ */
+.for(@list, @code) {
+  & {
+    .loop(@i:0) when (@i < length(@list)) {
+      @value: extract(@list, @i+1);
+      @code();
+      .loop(@i + 1);
+    }
+
+    .loop();
+  }
+}

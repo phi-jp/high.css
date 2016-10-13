@@ -1,10 +1,9 @@
 
 @import 'ress/ress.less';
 
-@import 'method.less';
+@import 'util.less';
 @import 'grid.less';
 @import 'flex.less';
-@import 'layout.less';
 
 
 
@@ -43,38 +42,75 @@
   border-style: solid;
   border-width: 1px;
 }
+.border-top {
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+.border-right {
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+.border-bottom {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+.border-left {
+  border-left-style: solid;
+  border-left-width: 1px;
+}
+
+/*
+ * border-radius
+ */
+.circle {
+  border-radius: 50%;
+}
+.rounded {
+  border-radius: 3px;
+}
+.for(1 2 3 4 5 6 7 8 9 10, {
+  .rounded@{value} { border-radius: @value * 1px; }
+});
 
 /*
  * margin, padding
  */
-@nums: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20;
+@nums: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,32,64;
 
 // margin
 .for(@nums, {
   // margin
-  .m@{i} { margin: @value * 1px; }
+  .m@{value} { margin: @value * 1px; }
   // margin-top
-  .mt@{i} { margin-top: @value * 1px; }
+  .mt@{value} { margin-top: @value * 1px; }
   // margin-right
-  .mr@{i} { margin-right: @value * 1px; }
+  .mr@{value} { margin-right: @value * 1px; }
   // margin-bottom
-  .mb@{i} { margin-bottom: @value * 1px; }
+  .mb@{value} { margin-bottom: @value * 1px; }
   // margin-left
-  .ml@{i} { margin-left: @value * 1px; }
+  .ml@{value} { margin-left: @value * 1px; }
+  // margin-x
+  .mx@{value} { margin-left: @value * 1px; margin-right: @value * 1px; }
+  // margin-y
+  .my@{value} { margin-top: @value * 1px; margin-bottom: @value * 1px; }
 });
+
+.ml-auto { margin-left: auto; }
+.mr-auto { margin-right: auto; }
+.mx-auto { .ml-auto; .mr-auto; }
 
 // padding
 .for(@nums, {
   // padding
-  .p@{i} { padding: @value * 1px; }
+  .p@{value} { padding: @value * 1px; }
   // padding-top
-  .pt@{i} { padding-top: @value * 1px; }
+  .pt@{value} { padding-top: @value * 1px; }
   // padding-right
-  .pr@{i} { padding-right: @value * 1px; }
+  .pr@{value} { padding-right: @value * 1px; }
   // padding-bottom
-  .pb@{i} { padding-bottom: @value * 1px; }
+  .pb@{value} { padding-bottom: @value * 1px; }
   // padding-left
-  .pl@{i} { padding-left: @value * 1px; }
+  .pl@{value} { padding-left: @value * 1px; }
 });
 
 

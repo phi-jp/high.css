@@ -36,12 +36,26 @@ app.block.m18
 
   style(scoped, type='less').
     :scope {
+      font-family: "HiraKakuProN-W3",Avenir,"Open Sans","Helvetica Neue",Helvetica,Arial,Verdana,Roboto,"游ゴシック","Yu Gothic","游ゴシック体","YuGothic","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","Meiryo UI","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+      -webkit-font-smoothing: antialiased;
+      font-smoothing: antialiased;
+
       * {
         border-color: rgba(0, 0, 0, 0.1);
       }
+
+      p {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
     }
 
-section-grid.block.mt18.mb18
+section-grid.block.my64
   h2 Grid
 
   section.mb8
@@ -68,7 +82,7 @@ section-grid.block.mt18.mb18
       div.s-col12.m-col6.l-col4.p8.border qux
       div.s-col12.m-col6.l-col4.p8.border piyo
 
-section-flex.block.mt18.mb18
+section-flex.block.my64
   h2 Flexbox
 
   section.mb8
