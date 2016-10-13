@@ -12,7 +12,7 @@ gulp.task('less', function() {
     .pipe(gulp.dest('./'))
     .pipe(cssmin())
     .pipe(rename({
-      extname: '.min.js'
+      extname: '.min.css'
     }))
     .pipe(gulp.dest('./'))
     ;
