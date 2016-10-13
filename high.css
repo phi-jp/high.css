@@ -480,6 +480,39 @@ video {
     width: 100%;
   }
 }
+@media only screen and (max-width : 600px) {
+  .s-hide {
+    display: none !important;
+  }
+  .m-show {
+    display: none !important;
+  }
+  .l-show {
+    display: none !important;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  .m-hide {
+    display: none !important;
+  }
+  .s-show {
+    display: none !important;
+  }
+  .l-show {
+    display: none !important;
+  }
+}
+@media only screen and (min-width : 993px) {
+  .l-hide {
+    display: none !important;
+  }
+  .s-show {
+    display: none !important;
+  }
+  .m-show {
+    display: none !important;
+  }
+}
 /*
  * flex
  */

@@ -31,6 +31,8 @@ app.block.m18
   h1 high.css
   p Text Text Text Text Text Text Text Text Text 
 
+
+  section-show-hide
   section-grid
   section-flex
 
@@ -54,6 +56,30 @@ app.block.m18
         padding-bottom: 4rem;
       }
     }
+  script.
+    var self = this;
+    window.onresize = function() {
+      self.update();
+    };
+
+section-show-hide.block.my64
+  h2 Show/Hide
+
+  p width: {innerWidth}
+
+  section.mb8
+    p .s-show .m-show .l-show
+    div.p8.border
+      p.s-show small 時のみ表示
+      p.m-show medium 時のみ表示
+      p.l-show large 時のみ表示
+
+  section.mb8
+    p .s-hide .m-hide .l-hide
+    div.p8.border
+      p.s-hide small 時に消える
+      p.m-hide medium 時に消える
+      p.l-hide large 時に消える
 
 section-grid.block.my64
   h2 Grid
