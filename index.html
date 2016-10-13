@@ -31,6 +31,7 @@ app.block.m18
   h1 high.css
   p Text Text Text Text Text Text Text Text Text 
 
+  section-grid
   section-flex
 
   style(scoped, type='less').
@@ -40,7 +41,34 @@ app.block.m18
       }
     }
 
-section-flex.block.mt12.mb12
+section-grid.block.mt18.mb18
+  h2 Grid
+
+  section.mb8
+    p col1
+    div.row.p8.border
+      div.col1.p8.border hoge
+      div.col1.p8.border foo
+      div.col1.p8.border bar
+
+  section.mb8
+    p col4
+    div.row.p8.border
+      div.col4.p8.border hoge
+      div.col4.p8.border foo
+      div.col4.p8.border bar
+
+  section.mb8
+    p s-col12.m-col6.l-col4
+    div.row.p8.border
+      div.s-col12.m-col6.l-col4.p8.border hoge
+      div.s-col12.m-col6.l-col4.p8.border foo
+      div.s-col12.m-col6.l-col4.p8.border bar
+      div.s-col12.m-col6.l-col4.p8.border baz
+      div.s-col12.m-col6.l-col4.p8.border qux
+      div.s-col12.m-col6.l-col4.p8.border piyo
+
+section-flex.block.mt18.mb18
   h2 Flexbox
 
   section.mb8

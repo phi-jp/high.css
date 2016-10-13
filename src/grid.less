@@ -1,0 +1,45 @@
+
+
+@mobile: 600px;
+@desktop: 993px;
+
+@small-max: @mobile;
+@medium-min: (@mobile + 1);
+@medium-max: (@desktop - 1);
+@desktop-min: @desktop;
+
+@media-mobile: ~"only screen and (max-width : @{small-max})";
+@media-tablet: ~"only screen and (min-width: @{medium-min}) and (max-width: @{medium-max})";
+@media-desktop: ~"only screen and (min-width : @{desktop-min})";
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+// col
+.for(1 2 3 4 5 6 7 8 9 10 11 12, {
+  .col@{value} {
+    width: (100% / 12 * @value);
+  }
+  .s-col@{value} {
+    width: (100% / 12 * @value);
+  }
+});
+
+@media @media-tablet {
+  .for(1 2 3 4 5 6 7 8 9 10 11 12, {
+    .m-col@{value} {
+      width: (100% / 12 * @value);
+    }
+  });
+}
+
+@media @media-desktop {
+  .for(1 2 3 4 5 6 7 8 9 10 11 12, {
+    .l-col@{value} {
+      width: (100% / 12 * @value);
+    }
+  });
+}
