@@ -1,44 +1,86 @@
 <!doctype html>
-
+ 
 <html>
   <head>
-    <meta charset='utf-8' />
-    <link rel='stylesheet' href='high.css' />
-    <style>
-    .col {
-      box-shadow: 0px 0px 4px 0px #aaa;
-      padding: 10px;
-    }
-    </style>
-    <script>
-    window.onresize = function() {
-      // console.clear();
-      console.log(innerWidth);
-    }
-    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    <title>${title}</title>
+    <meta name="description" content="${description}" />
+    
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jade/1.11.0/jade.js'></script>
+    <!--
+    <script src='http://cdn.rawgit.com/pugjs/pug/1.11.0/runtime.js'></script>
+    -->
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/riot/2.6.3/riot+compiler.js'></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/riot/2.3.18/riot+compiler.js'></script>
+
+    <link rel="stylesheet" href="high.css" />
   </head>
   <body>
-    <h1>high.css</h1>
-    <div class='row'>
-      <div class='col s12 m6 l4'>
-        AAAAAAAAAAAAA
-      </div>
-      <div class='col s12 m6 l4'>
-        BBBBBBBBBBBBB
-      </div>
-      <div class='col s12 m6 l4'>
-        CCCCCCCCCCCCC
-      </div>
-      <div class='col s12 m6 l4'>
-        AAAAAAAAAAAAA
-      </div>
-      <div class='col s12 m6 l4'>
-        BBBBBBBBBBBBB
-      </div>
-      <div class='col s12 m6 l4'>
-        CCCCCCCCCCCCC
-      </div>
-    </div>
+    <app title='${title}'></app>
   </body>
 </html>
 
+
+<script type='riot/tag' template='jade'>
+app.block.m18
+  h1 high.css
+  p Text Text Text Text Text Text Text Text Text 
+
+  section-flex
+
+  style(scoped, type='less').
+    :scope {
+      * {
+        border-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+
+section-flex.block.mt12.mb12
+  h2 Flexbox
+
+  section.mb8
+    p flex
+
+    div.f.p8.border
+      div.p8.border first
+      div.p8.border second
+      div.p8.border third
+
+  section.mb12
+    p flex-auto
+
+    div.f.p8.border
+      div.p8.border first
+      div.p8.border.flex-auto second
+      div.p8.border third
+
+  section.mb12
+    p flex-center
+
+    div.f.fc.p8.border
+      div.p8.border first
+
+  section.mb12
+    p flex-middle
+
+    div.f.fm.p8.border.size100
+      div.p8.border first
+
+  section.mb12
+    p flex-heart
+
+    div.f.fh.p8.border.size100
+      div.p8.border first
+
+
+</script>
+
+
+<script>
+  riot.mount('app');
+</script>
