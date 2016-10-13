@@ -575,11 +575,6 @@ video {
   justify-content: center;
   align-items: center;
 }
-.container {
-  margin: 0px auto;
-  max-width: 1280px;
-  width: 90%;
-}
 /*
  * display
  */
