@@ -1600,11 +1600,29 @@ video {
 .rounded10 {
   border-radius: 10px;
 }
+.black {
+  color: black;
+}
+.bg-black {
+  background-color: black;
+}
+.border-black {
+  border-color: black;
+}
+.white {
+  color: white;
+}
+.bg-white {
+  background-color: white;
+}
+.border-white {
+  border-color: white;
+}
 .red {
   color: red;
 }
 .bg-red {
-  backround-color: red;
+  background-color: red;
 }
 .border-red {
   border-color: red;
@@ -1613,7 +1631,7 @@ video {
   color: yellow;
 }
 .bg-yellow {
-  backround-color: yellow;
+  background-color: yellow;
 }
 .border-yellow {
   border-color: yellow;
@@ -1622,7 +1640,7 @@ video {
   color: green;
 }
 .bg-green {
-  backround-color: green;
+  background-color: green;
 }
 .border-green {
   border-color: green;
@@ -1631,7 +1649,7 @@ video {
   color: cyan;
 }
 .bg-cyan {
-  backround-color: cyan;
+  background-color: cyan;
 }
 .border-cyan {
   border-color: cyan;
@@ -1640,7 +1658,7 @@ video {
   color: blue;
 }
 .bg-blue {
-  backround-color: blue;
+  background-color: blue;
 }
 .border-blue {
   border-color: blue;
@@ -1649,7 +1667,7 @@ video {
   color: purple;
 }
 .bg-purple {
-  backround-color: purple;
+  background-color: purple;
 }
 .border-purple {
   border-color: purple;
