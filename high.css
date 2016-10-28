@@ -1475,6 +1475,11 @@ video {
   width: 100px;
   height: 100px;
 }
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .row {
   display: flex;
   flex-wrap: wrap;
