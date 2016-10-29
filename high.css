@@ -365,6 +365,29 @@ video {
   text-align: right;
 }
 /*
+ * typography
+ */
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
+/*
+ * overflow
+ */
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-auto {
+  overflow: auto;
+}
+.overflow-scroll {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+/*
  * margin, padding
  */
 .m0 {
