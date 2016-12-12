@@ -1845,6 +1845,15 @@ video {
 .flex-auto {
   flex: 1 1 auto;
 }
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
 .f {
   display: flex;
 }
