@@ -1523,6 +1523,9 @@ video {
   padding-top: 64px;
   padding-bottom: 64px;
 }
+.box-shadow {
+  box-shadow: 0px 0px 4px 0px #222;
+}
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -1915,6 +1918,24 @@ video {
 }
 .border-purple {
   border-color: purple;
+}
+.skyblue {
+  color: skyblue;
+}
+.bg-skyblue {
+  background-color: skyblue;
+}
+.border-skyblue {
+  border-color: skyblue;
+}
+.aquamarine {
+  color: aquamarine;
+}
+.bg-aquamarine {
+  background-color: aquamarine;
+}
+.border-aquamarine {
+  border-color: aquamarine;
 }
 /*
  * size
