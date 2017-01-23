@@ -29,11 +29,11 @@
 <script type='riot/tag' template='jade'>
 app.block
   div.f.height100per
-    div.menu.px20.py16
+    div.menu.flex-fixed.white.bg-green.px20.py16.overflow-scroll
       h1 high.css
       div.item(each='{menus}')
         a(href='{link}') {label}
-    div.p16.flex-auto
+    div.p16.flex-auto.overflow-scroll
       div.page(name='page')
 
   style(scoped, type='less').
@@ -55,16 +55,6 @@ app.block
       p {
         margin-top: 1rem;
         margin-bottom: 1rem;
-      }
-
-      .menu {
-        background-color: hsl(150, 80%, 50%);
-        color: hsl(0, 0%, 100%);
-      }
-
-      .section {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
       }
     }
   script.
@@ -92,7 +82,7 @@ section-about
   h2 about
   p Text Text Text Text Text Text Text Text Text 
 
-section-show-hide.block.my64
+section-show-hide.block
   h2 Show/Hide
 
   p width: {innerWidth}
@@ -111,7 +101,7 @@ section-show-hide.block.my64
       p.m-hide medium 時に消える
       p.l-hide large 時に消える
 
-section-grid.block.my64
+section-grid.block
   h2 Grid
 
   section.mb8
@@ -154,7 +144,7 @@ section-grid.block.my64
         h4.text-center Title
         p Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 
-section-flex.block.my64
+section-flex.block
   h2 Flexbox
 
   section.mb8
@@ -192,7 +182,7 @@ section-flex.block.my64
       div.p8.border first
 
 
-section-color.block.my64
+section-color.block
   h2 Color
 
   section.mb8
@@ -219,7 +209,7 @@ section-color.block.my64
       div.p8.border.border-green green
       div.p8.border.border-blue blue
 
-section-util.block.my64
+section-util.block
   h2 util
 
   section.mb8

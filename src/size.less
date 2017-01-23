@@ -1,0 +1,47 @@
+/*
+ * size
+ */
+
+.for(10 20 30 40 50 60 70 80 90 100, {
+  // width
+  .width@{value} {
+    width: @value * 1px;
+  }
+  // height
+  .height@{value} {
+    height: @value * 1px;
+  }
+  // size
+  .size@{value} {
+    width: @value * 1px;
+    height: @value * 1px;
+  }
+
+  // width
+  .width@{value}per {
+    width: @value * 1%;
+  }
+  // height
+  .height@{value}per {
+    height: @value * 1%;
+  }
+  // size
+  .size@{value}per {
+    width: @value * 1%;
+    height: @value * 1%;
+  }
+});
+
+.width-auto {
+  width: auto;
+}
+.width-full {
+  width: 100%;
+}
+.height-auto {
+  height: auto;
+}
+.height-full {
+  height: 100%;
+}
+
