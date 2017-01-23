@@ -27,30 +27,39 @@
 
 
 <script type='riot/tag' template='jade'>
-app.block.m18
-  h1 high.css
-  p Text Text Text Text Text Text Text Text Text 
-
-
-  section-show-hide
-  section-grid
-  section-flex
-  section-color
-  section-util
+app.block
+  div.f.height100per
+    div.menu.px20.py16
+      h1 high.css
+      div.item(each='{menus}')
+        a(href='{link}') {label}
+    div.p16.flex-auto
+      div.page(name='page')
 
   style(scoped, type='less').
     :scope {
       font-family: "HiraKakuProN-W3",Avenir,"Open Sans","Helvetica Neue",Helvetica,Arial,Verdana,Roboto,"游ゴシック","Yu Gothic","游ゴシック体","YuGothic","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","Meiryo UI","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
       -webkit-font-smoothing: antialiased;
       font-smoothing: antialiased;
+      height: 100vh;
 
       * {
         border-color: rgba(0, 0, 0, 0.1);
       }
 
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
       p {
         margin-top: 1rem;
         margin-bottom: 1rem;
+      }
+
+      .menu {
+        background-color: hsl(150, 80%, 50%);
+        color: hsl(0, 0%, 100%);
       }
 
       .section {
@@ -63,6 +72,25 @@ app.block.m18
     window.onresize = function() {
       self.update();
     };
+
+    riot.route(function(tagName) {
+      tagName = tagName || 'about';
+      riot.mount(self.page, 'section-' + tagName);
+    });
+    riot.route.start(true);
+
+    this.menus = [
+      { label: 'About', link: '#about' },
+      { label: 'Show/Hide', link: '#show-hide' },
+      { label: 'Grid', link: '#grid' },
+      { label: 'Flex', link: '#flex' },
+      { label: 'Color', link: '#color' },
+      { label: 'Util', link: '#util' },
+    ];
+
+section-about
+  h2 about
+  p Text Text Text Text Text Text Text Text Text 
 
 section-show-hide.block.my64
   h2 Show/Hide
