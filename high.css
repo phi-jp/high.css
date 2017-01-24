@@ -2874,6 +2874,52 @@ video {
   width: 200vh;
   height: 200vh;
 }
+.width-256 {
+  width: 256px;
+}
+.max-width-256 {
+  max-width: 256px;
+}
+.min-width-256 {
+  min-width: 256px;
+}
+.height-256 {
+  height: 256px;
+}
+.size-256 {
+  width: 256px;
+  height: 256px;
+}
+.width-256-per {
+  width: 256%;
+}
+.height-256-per {
+  height: 256%;
+}
+.size-256-per {
+  width: 256%;
+  height: 256%;
+}
+.width-256-vw {
+  width: 256vw;
+}
+.height-256-vw {
+  height: 256vw;
+}
+.size-256-vw {
+  width: 256vw;
+  height: 256vw;
+}
+.width-256-vh {
+  width: 256vh;
+}
+.height-256-vh {
+  height: 256vh;
+}
+.size-256-vh {
+  width: 256vh;
+  height: 256vh;
+}
 .width-300 {
   width: 300px;
 }
@@ -3400,6 +3446,9 @@ video {
 }
 .font-size-200 {
   font-size: 200px;
+}
+.font-size-256 {
+  font-size: 256px;
 }
 .font-size-300 {
   font-size: 300px;
@@ -4439,6 +4488,29 @@ video {
 .padding-y-200 {
   padding-top: 200px;
   padding-bottom: 200px;
+}
+.padding-256 {
+  padding: 256px;
+}
+.padding-top-256 {
+  padding-top: 256px;
+}
+.padding-right-256 {
+  padding-right: 256px;
+}
+.padding-bottom-256 {
+  padding-bottom: 256px;
+}
+.padding-left-256 {
+  padding-left: 256px;
+}
+.padding-x-256 {
+  padding-left: 256px;
+  padding-right: 256px;
+}
+.padding-y-256 {
+  padding-top: 256px;
+  padding-bottom: 256px;
 }
 .padding-300 {
   padding: 300px;
@@ -5635,6 +5707,29 @@ video {
 .margin-y-200 {
   margin-top: 200px;
   margin-bottom: 200px;
+}
+.margin-256 {
+  margin: 256px;
+}
+.margin-top-256 {
+  margin-top: 256px;
+}
+.margin-right-256 {
+  margin-right: 256px;
+}
+.margin-bottom-256 {
+  margin-bottom: 256px;
+}
+.margin-left-256 {
+  margin-left: 256px;
+}
+.margin-x-256 {
+  margin-left: 256px;
+  margin-right: 256px;
+}
+.margin-y-256 {
+  margin-top: 256px;
+  margin-bottom: 256px;
 }
 .margin-300 {
   margin: 300px;
@@ -6870,6 +6965,29 @@ video {
   padding-top: 200px;
   padding-bottom: 200px;
 }
+.p256 {
+  padding: 256px;
+}
+.pt256 {
+  padding-top: 256px;
+}
+.pr256 {
+  padding-right: 256px;
+}
+.pb256 {
+  padding-bottom: 256px;
+}
+.pl256 {
+  padding-left: 256px;
+}
+.px256 {
+  padding-left: 256px;
+  padding-right: 256px;
+}
+.py256 {
+  padding-top: 256px;
+  padding-bottom: 256px;
+}
 .p300 {
   padding: 300px;
 }
@@ -8065,6 +8183,29 @@ video {
 .my200 {
   margin-top: 200px;
   margin-bottom: 200px;
+}
+.m256 {
+  margin: 256px;
+}
+.mt256 {
+  margin-top: 256px;
+}
+.mr256 {
+  margin-right: 256px;
+}
+.mb256 {
+  margin-bottom: 256px;
+}
+.ml256 {
+  margin-left: 256px;
+}
+.mx256 {
+  margin-left: 256px;
+  margin-right: 256px;
+}
+.my256 {
+  margin-top: 256px;
+  margin-bottom: 256px;
 }
 .m300 {
   margin: 300px;
@@ -10022,6 +10163,46 @@ video {
 .s200vh {
   width: 200vh;
   height: 200vh;
+}
+.w256 {
+  width: 256px;
+}
+.h256 {
+  height: 256px;
+}
+.s256 {
+  width: 256px;
+  height: 256px;
+}
+.w256per {
+  width: 256%;
+}
+.h256per {
+  height: 256%;
+}
+.s256per {
+  width: 256%;
+  height: 256%;
+}
+.w256vw {
+  width: 256vw;
+}
+.h256vw {
+  height: 256vw;
+}
+.s256vw {
+  width: 256vw;
+  height: 256vw;
+}
+.w256vh {
+  width: 256vh;
+}
+.h256vh {
+  height: 256vh;
+}
+.s256vh {
+  width: 256vh;
+  height: 256vh;
 }
 .w300 {
   width: 300px;
