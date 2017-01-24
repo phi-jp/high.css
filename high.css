@@ -611,35 +611,35 @@ video {
   }
 }
 @media only screen and (max-width : 600px) {
-  .s-hide {
+  .small-hide {
     display: none !important;
   }
-  .m-show {
+  .middle-show {
     display: none !important;
   }
-  .l-show {
+  .large-show {
     display: none !important;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  .m-hide {
+  .middle-hide {
     display: none !important;
   }
-  .s-show {
+  .small-show {
     display: none !important;
   }
-  .l-show {
+  .large-show {
     display: none !important;
   }
 }
 @media only screen and (min-width : 993px) {
-  .l-hide {
+  .large-hide {
     display: none !important;
   }
-  .s-show {
+  .small-show {
     display: none !important;
   }
-  .m-show {
+  .middle-show {
     display: none !important;
   }
 }
@@ -724,34 +724,34 @@ video {
 .rounded {
   border-radius: 3px;
 }
-.rounded1 {
+.rounded-1 {
   border-radius: 1px;
 }
-.rounded2 {
+.rounded-2 {
   border-radius: 2px;
 }
-.rounded3 {
+.rounded-3 {
   border-radius: 3px;
 }
-.rounded4 {
+.rounded-4 {
   border-radius: 4px;
 }
-.rounded5 {
+.rounded-5 {
   border-radius: 5px;
 }
-.rounded6 {
+.rounded-6 {
   border-radius: 6px;
 }
-.rounded7 {
+.rounded-7 {
   border-radius: 7px;
 }
-.rounded8 {
+.rounded-8 {
   border-radius: 8px;
 }
-.rounded9 {
+.rounded-9 {
   border-radius: 9px;
 }
-.rounded10 {
+.rounded-10 {
   border-radius: 10px;
 }
 .black {
