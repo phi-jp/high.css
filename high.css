@@ -326,6 +326,13 @@ video {
  * variables
  */
 /*
+ * reset
+ */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/*
  * method
  */
 /*

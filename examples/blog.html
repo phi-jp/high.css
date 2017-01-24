@@ -33,7 +33,8 @@ app.block.height-100-vh
       h1 blog
     div.main.max-width-900.mxa.px60.py40.h100vh.dimgray
       div.post.mb40(each='{posts}')
-        div.title.font-size-26.font-bold.mb8 {title}
+        div.title.font-size-26.font-bold.mb8
+          a(href='') {title}
         div.status.f.mb8.font-size-12
           div.user.f.fm
             img.block.size-20.circle.mr4(src='{user.icon}')
