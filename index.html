@@ -216,36 +216,47 @@ section-util.block
     p line-clamp
 
     div.f.p8.border.mb4
-      p.line-clamp-1.width-100 Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world!
+      p.line-clamp-1.width-100 Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world!
     div.f.p8.border.mb4
-      p.line-clamp-2.width-100 Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world!
+      p.line-clamp-2.width-100 Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world!
     div.f.p8.border.mb4
-      p.line-clamp-3.width-100 Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world!
+      p.line-clamp-3.width-100 Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world!
 
 section-shorthand.block
   h2 shorthand
 
-  section.mb8
-    p line-clamp
+  section.mb8(each='{map}')
+    h3.mt16 {name}
 
-    table
+    table.width-100-per.text-left
       tr
-        th.border-bottom name
-        th.border-bottom shorthand
-      tr(each='{map}')
-        td {shorthand}
-        td {name}
+        th.border-bottom.px8.py10 name
+        th.border-bottom.px8.py10 shorthand
+      tr(each='{items}')
+        td.border-bottom.p8 {shorthand}
+        td.border-bottom.p8 {name}
 
   script.
     this.map = [
-      {name:'flex', shorthand: 'f'},
-      {name:'flex-center', shorthand: 'fc'},
-      {name:'flex-left', shorthand: 'fl'},
-      {name:'flex-right', shorthand: 'fr'},
-      {name:'flex-middle', shorthand: 'fm'},
-      {name:'flex-top', shorthand: 'ft'},
-      {name:'flex-bottom', shorthand: 'fb'},
-      {name:'flex-heart', shorthand: 'fh'},
+      {
+        name: 'flex',
+        items: [
+          {name:'flex', shorthand: 'f'},
+          {name:'flex-center', shorthand: 'fc'},
+          {name:'flex-left', shorthand: 'fl'},
+          {name:'flex-right', shorthand: 'fr'},
+          {name:'flex-middle', shorthand: 'fm'},
+          {name:'flex-top', shorthand: 'ft'},
+          {name:'flex-bottom', shorthand: 'fb'},
+          {name:'flex-heart', shorthand: 'fh'},
+        ]
+      },
+      {
+        name: 'box',
+        items: [
+          {name:'flex', shorthand: 'f'},
+        ],
+      },
     ];
 
 </script>
