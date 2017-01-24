@@ -1,1 +1,64 @@
-http://purecss.io/layouts/blog/
+<!doctype html>
+ 
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    <title>${title}</title>
+    <meta name="description" content="${description}" />
+    
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jade/1.11.0/jade.js'></script>
+    <!--
+    <script src='http://cdn.rawgit.com/pugjs/pug/1.11.0/runtime.js'></script>
+    -->
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/riot/2.6.3/riot+compiler.js'></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/riot/2.3.18/riot+compiler.js'></script>
+
+    <link rel="stylesheet" href="../high.css" />
+  </head>
+  <body>
+    <app title='${title}'></app>
+  </body>
+</html>
+
+
+<script type='riot/tag' template='jade'>
+app.block.height-100-vh
+  div.f
+    div.menu.w200.h100vh.p20.bg-blue.white
+      h1 blog
+    div.main.p32.h100vh
+      div.post.mb32(each='{posts}')
+        div.title.font-bold {title}
+        div.status.f
+          div.user {user.name}
+          div.mx10 |
+          div.tags(each='{tag in tags}')
+            div {tag}
+        div.description {description}
+
+  script.
+    this.posts = [
+      {
+        title: 'Introducing Pure',
+        user: { name: 'phi' },
+        tags: ['js', 'phina.js'],
+        description: 'Text Text Text Text Text Text Text Text Text Text '
+      },
+      {
+        title: 'Introducing Pure',
+        user: { name: 'phi' },
+        tags: ['js', 'phina.js'],
+        description: 'Text Text Text Text Text Text Text Text Text Text '
+      },
+    ];
+
+</script>
+
+<script>
+  riot.mount('app');
+</script>
