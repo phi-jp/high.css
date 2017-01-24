@@ -12,23 +12,51 @@
     height: @value * 1px;
   }
   // size
-  .size@{value} {
+  .size-@{value} {
     width: @value * 1px;
     height: @value * 1px;
   }
 
-  // width
-  .width@{value}per {
+  // width %
+  .width-@{value}-per {
     width: @value * 1%;
   }
-  // height
-  .height@{value}per {
+  // height %
+  .height-@{value}-per {
     height: @value * 1%;
   }
-  // size
-  .size@{value}per {
+  // size %
+  .size-@{value}-per {
     width: @value * 1%;
     height: @value * 1%;
+  }
+
+  // width vw
+  .width-@{value}-vw {
+    width: @value * 1vw;
+  }
+  // height vw
+  .height-@{value}-vw {
+    height: @value * 1vw;
+  }
+  // size vw
+  .size-@{value}-vw {
+    width: @value * 1vw;
+    height: @value * 1vw;
+  }
+
+  // width vh
+  .width-@{value}-vh {
+    width: @value * 1vh;
+  }
+  // height vh
+  .height-@{value}-vh {
+    height: @value * 1vh;
+  }
+  // size vh
+  .size-@{value}-vh {
+    width: @value * 1vh;
+    height: @value * 1vh;
   }
 });
 

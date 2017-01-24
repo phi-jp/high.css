@@ -27,8 +27,8 @@
 
 
 <script type='riot/tag' template='jade'>
-app.block
-  div.f.height100per
+app.block.height-100-vh
+  div.f.height-100-per
     div.menu.box-shadow.flex-fixed.white.bg-skyblue.px20.py16.overflow-scroll
       h1 high.css
       div.item(each='{menus}')
@@ -41,7 +41,6 @@ app.block
       font-family: "HiraKakuProN-W3",Avenir,"Open Sans","Helvetica Neue",Helvetica,Arial,Verdana,Roboto,"游ゴシック","Yu Gothic","游ゴシック体","YuGothic","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","Meiryo UI","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
       -webkit-font-smoothing: antialiased;
       font-smoothing: antialiased;
-      height: 100vh;
 
       * {
         border-color: rgba(0, 0, 0, 0.1);
@@ -76,6 +75,7 @@ app.block
       { label: 'Flex', link: '#flex' },
       { label: 'Color', link: '#color' },
       { label: 'Util', link: '#util' },
+      { label: 'Shorthand', link: '#shorthand' },
     ];
 
 section-about
@@ -172,13 +172,13 @@ section-flex.block
   section.mb12
     p flex-middle
 
-    div.f.fm.p8.border.size100
+    div.f.fm.p8.border.size-100
       div.p8.border first
 
   section.mb12
     p flex-heart
 
-    div.f.fh.p8.border.size100
+    div.f.fh.p8.border.size-100
       div.p8.border first
 
 
@@ -216,11 +216,37 @@ section-util.block
     p line-clamp
 
     div.f.p8.border.mb4
-      p.line-clamp1.width100 Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world!
+      p.line-clamp-1.width-100 Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world!
     div.f.p8.border.mb4
-      p.line-clamp2.width100 Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world!
+      p.line-clamp-2.width-100 Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world!
     div.f.p8.border.mb4
-      p.line-clamp3.width100 Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world!
+      p.line-clamp-3.width-100 Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world! Hello, world!
+
+section-shorthand.block
+  h2 shorthand
+
+  section.mb8
+    p line-clamp
+
+    table
+      tr
+        th.border-bottom name
+        th.border-bottom shorthand
+      tr(each='{map}')
+        td {shorthand}
+        td {name}
+
+  script.
+    this.map = [
+      {name:'flex', shorthand: 'f'},
+      {name:'flex-center', shorthand: 'fc'},
+      {name:'flex-left', shorthand: 'fl'},
+      {name:'flex-right', shorthand: 'fr'},
+      {name:'flex-middle', shorthand: 'fm'},
+      {name:'flex-top', shorthand: 'ft'},
+      {name:'flex-bottom', shorthand: 'fb'},
+      {name:'flex-heart', shorthand: 'fh'},
+    ];
 
 </script>
 
