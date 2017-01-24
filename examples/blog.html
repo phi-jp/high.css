@@ -31,7 +31,7 @@ app.block.height-100-vh
   div.f
     div.menu.small-hide.flex-fixed.w200.h100vh.p20.bg-cornflowerblue.white
       h1 blog
-    div.main.px60.py40.h100vh.dimgray
+    div.main.max-width-900.mxa.px60.py40.h100vh.dimgray
       div.post.mb40(each='{posts}')
         div.title.font-size-26.font-bold.mb8 {title}
         div.status.f.mb8.font-size-12
@@ -63,9 +63,12 @@ app.block.height-100-vh
         tags: ['js', 'phina.js'],
         description: 'はじめに 最近, 仕事として Web でアプリっぽい表現が求められることが多くなってきました. いろいろと tips が溜まってきたのでちょこちょこ備忘録がてら紹介しようと思います.'
       },
-
-
-
+      {
+        title: 'ピュアな JavaScript でフォーム(form)系要素の値を取得, 設定する方法一覧',
+        user: { name: 'phi', icon: '../images/kenkyo.png' },
+        tags: ['js', 'phina.js'],
+        description: '先日書いた 『サーバーだけに頼る時代は終わった!? クライアントサイドでしっかり Validation する方法 | phiary』 がありがたいことに好評だったので今回も form について書こうと思います.'
+      },
     ];
 
 </script>

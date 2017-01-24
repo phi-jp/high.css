@@ -4,18 +4,14 @@
 
 .for(@nums, {
   // width
-  .width-@{value} {
-    width: @value * 1px;
-  }
+  .width-@{value} { width: @value * 1px; }
+  .max-width-@{value} { max-width: @value * 1px; }
+  .min-width-@{value} { min-width: @value * 1px; }
   // height
-  .height-@{value} {
-    height: @value * 1px;
-  }
+  .height-@{value} { height: @value * 1px; }
   // size
-  .size-@{value} {
-    width: @value * 1px;
-    height: @value * 1px;
-  }
+  .size-@{value} { width: @value * 1px; height: @value * 1px; }
+
 
   // width %
   .width-@{value}-per {
