@@ -54,3 +54,49 @@
 .mla { .margin-left-auto; }
 .mra { .margin-right-auto; }
 .mxa { .margin-x-auto; }
+
+
+/*
+ *
+ */
+.for(@nums, {
+  // width
+  .w@{value} { width: @value * 1px; }
+  // height
+  .h@{value} { height: @value * 1px; }
+  // size
+  .s@{value} { width: @value * 1px; height: @value * 1px; }
+
+  // width %
+  .w@{value}-per { width: @value * 1%; }
+  // height %
+  .h@{value}-per { height: @value * 1%; }
+  // size %
+  .s@{value}-per { width: @value * 1%; height: @value * 1%; }
+
+  // width vw
+  .w@{value}-vw { width: @value * 1vw; }
+  // height vw
+  .h@{value}-vw { height: @value * 1vw; }
+  // size vw
+  .s@{value}-vw { width: @value * 1vw; height: @value * 1vw; }
+
+  // width vh
+  .w@{value}-vh { width: @value * 1vh; }
+  // height vh
+  .h@{value}-vh { height: @value * 1vh; }
+  // size vh
+  .s@{value}-vh { width: @value * 1vh; height: @value * 1vh; }
+});
+.wa {
+  .width-auto;
+}
+.wf {
+  .width-full;
+}
+.ha {
+  .height-auto;
+}
+.hf {
+  .height-full;
+}
