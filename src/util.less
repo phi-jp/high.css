@@ -2,13 +2,18 @@
  * util
  */
 
+/*
+ * variables
+ */
+@nums: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,32,64;
+@colors: black white red yellow green cyan blue purple skyblue aquamarine;
+@mobile: 600px;
+@desktop: 993px;
 
 
 /*
  * media
  */
-@mobile: 600px;
-@desktop: 993px;
 
 @small-max: @mobile;
 @medium-min: (@mobile + 1);
@@ -18,7 +23,6 @@
 @media-mobile: ~"only screen and (max-width : @{small-max})";
 @media-tablet: ~"only screen and (min-width: @{medium-min}) and (max-width: @{medium-max})";
 @media-desktop: ~"only screen and (min-width : @{desktop-min})";
-
 
 
 /*
