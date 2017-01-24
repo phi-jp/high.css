@@ -29,32 +29,43 @@
 <script type='riot/tag' template='jade'>
 app.block.height-100-vh
   div.f
-    div.menu.w200.h100vh.p20.bg-blue.white
+    div.menu.small-hide.flex-fixed.w200.h100vh.p20.bg-cornflowerblue.white
       h1 blog
-    div.main.p32.h100vh
-      div.post.mb32(each='{posts}')
-        div.title.font-bold {title}
-        div.status.f
-          div.user {user.name}
+    div.main.px60.py40.h100vh.dimgray
+      div.post.mb40(each='{posts}')
+        div.title.font-size-26.font-bold.mb8 {title}
+        div.status.f.mb8.font-size-12
+          div.user.f.fm
+            img.block.size-20.circle.mr4(src='{user.icon}')
+            div {user.name}
           div.mx10 |
           div.tags(each='{tag in tags}')
-            div {tag}
-        div.description {description}
+            div.mr4 {tag}
+        div.description.line-clamp-3.font-size-14 {description}
 
   script.
     this.posts = [
       {
         title: 'Introducing Pure',
-        user: { name: 'phi' },
+        user: { name: 'phi', icon: '../images/kenkyo.png' },
         tags: ['js', 'phina.js'],
-        description: 'Text Text Text Text Text Text Text Text Text Text '
+        description: 'Yesterday at CSSConf, we launched Pure – a new CSS library. Phew! Here are the slides from the presentation. Although it looks pretty minimalist, we’ve been working on Pure for several months. After many iterations, we have released Pure as a set of small, responsive, CSS modules that you can use in every web project.'
       },
       {
         title: 'Introducing Pure',
-        user: { name: 'phi' },
+        user: { name: 'phi', icon: '../images/kenkyo.png' },
         tags: ['js', 'phina.js'],
-        description: 'Text Text Text Text Text Text Text Text Text Text '
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
       },
+      {
+        title: 'jQuery UI tips 1 - sortable を使ってスマートフォンアプリっぽい UI と並び替えを実装してみた',
+        user: { name: 'phi', icon: '../images/kenkyo.png' },
+        tags: ['js', 'phina.js'],
+        description: 'はじめに 最近, 仕事として Web でアプリっぽい表現が求められることが多くなってきました. いろいろと tips が溜まってきたのでちょこちょこ備忘録がてら紹介しようと思います.'
+      },
+
+
+
     ];
 
 </script>
