@@ -29,11 +29,11 @@
 <script type='riot/tag' template='jade'>
 app.block.dimgray.font-size-16
   div.header.relative.height-100.z-index-999.opacity-50-per
-    div.inner-header.fixed.width-100-per.bg-white.opacity-50-per.height-100.f.fm.px16.flex-between
+    div.inner-header.fixed.width-100-per.bg-white.tranceparent-white.height-100.f.fm.px16.flex-between
       img.height-80-per.rounded-6.box-shadow(src="../images/lp/getitLogo.png")
       div.button-inner.f.fh
         div.mr32.black.bold ログイン
-        div.border-cornflowerblue.rounded-6.white.bg-cornflowerblue.px16.py10.box-shadow 無料会員登録
+        div.border-cornflowerblue.rounded-6.white.bg-cornflowerblue.px16.py10.box-shadow.button-opacity 無料会員登録
 
   div.lp-top.f.fh.height-100-vh.relative.f.fh
     img(src="../images/lp/top.png").absolute.width-100-per.height-100-vh.object-fit-cover.grey
@@ -45,7 +45,8 @@ app.block.dimgray.font-size-16
           p プログラミングは素晴らしい力です。やらないのはもったいない。
           p 悩んでいるなら、Progateでやってみよう。無料で始められる、初心者向け学習サイト
       div.f.fh
-        div.button.rounded-10.text-center.bg-cornflowerblue.white.py16.px40.box-shadow 無料会員登録
+        div.button.rounded-10.text-center.bg-cornflowerblue.white.py16.px40.box-shadow.button-opacity 無料会員登録
+
 
 
   div.introduction.py100.bg-ghostwhite.px70
@@ -131,7 +132,8 @@ app.block.dimgray.font-size-16
         p さっそく始めよう。
         p 1分後、プログラミングの世界でお会いしましょう。
       div.f.fh.mt30
-        div.button.rounded-10.text-center.bg-cornflowerblue.white.py16.px32.box-shadow 無料会員登録
+        div.button.rounded-10.text-center.bg-cornflowerblue.white.py16.px32.box-shadow.button-opacity 無料会員登録
+          div.width-100-per.height-100-per.rounded-10.bg-white
 
   div.footer.pb32.bg-white.f
     div.column.width-30-vw.relative.f.fh
@@ -200,7 +202,7 @@ app.block.dimgray.font-size-16
         ],
       },
     ];
-  style(scoped).
+  style(scoped type="less").
     .filter {
       background-color: rgba(0, 0, 0, 0.5);
     }
@@ -209,10 +211,20 @@ app.block.dimgray.font-size-16
       z-index: 999;
     }
 
-    .opacity-50-per {
+    .tranceparent-white {
       background-color: rgba(255, 255, 255, 0.9);
     }
 
+    .opacity-80-per {
+      opacity: 0.8;
+    }
+
+    .button-opacity {
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
     .text-shadow {
       text-shadow: 0px 2px 4px #000;
     }
