@@ -28,24 +28,25 @@
 
 <script type='riot/tag' template='jade'>
 app.block.dimgray.font-size-16
-  div.header.relative.box-shadow
-    div.inner-header.fixed.width-100-per.bg-white.height-70.f.fm.px16.flex-between
-      img.height-80-per.rounded-6(src="../images/lp/getitLogo.png")
+  div.header.relative.height-100.z-index-999.opacity-50-per
+    div.inner-header.fixed.width-100-per.bg-white.opacity-50-per.height-100.f.fm.px16.flex-between
+      img.height-80-per.rounded-6.box-shadow(src="../images/lp/getitLogo.png")
       div.button-inner.f.fh
-        div.mr32 ログイン
+        div.mr32.black.bold ログイン
         div.border-cornflowerblue.rounded-6.white.bg-cornflowerblue.px16.py10.box-shadow 無料会員登録
 
-  div.lp-top.f.fh.height-100-vh
-    img(src="../images/lp/top.png").width-100-per.height-100-vh.object-fit-cover.grey
-    // div.filter.absolute.width-100-per.height-100-per
+  div.lp-top.f.fh.height-100-vh.relative.f.fh
+    img(src="../images/lp/top.png").absolute.width-100-per.height-100-vh.object-fit-cover.grey
+    div.filter.absolute.width-100-per.height-100-per
     div.lp-inner.absolute
-      div.mb30.block.mx32.white.min
-        h1.text-center さあ、プログラミングを始めよう
+      div.mb30.block.mx32.white
+        h1.text-center.font-size-32.mb24.text-shadow さあ、プログラミングを始めよう
         div.text-center
           p プログラミングは素晴らしい力です。やらないのはもったいない。
           p 悩んでいるなら、Progateでやってみよう。無料で始められる、初心者向け学習サイト
-      div.f.fh.mt30
+      div.f.fh
         div.button.rounded-10.text-center.bg-cornflowerblue.white.py16.px40.box-shadow 無料会員登録
+
 
   div.introduction.py100.bg-ghostwhite.px70
       div.title.text-center.font-size-32.mb-70
@@ -83,13 +84,13 @@ app.block.dimgray.font-size-16
     div.catch-copy.font-size-40.aquamarine.my32 「初心者でも、独学できるレッスンを」
 
     div.row.f.flex-around.py32
-      div.item.text-center.width-50-per.px55
+      div.item.s-col12.m-col6.l-col6.px55.mb32
         div.item-title.font-size-20.mb28.black 実践的なレッスン
         div.item-description.font-size-14
           p 現実に活かせない学びは必要ありません。
           p 実際にプロダクトを創りながら、自分一人でもそれが創れるようになるレッスンを提供します。
 
-      div.item.text-center.width-50-per.px55
+      div.item.s-col12.m-col6.l-col6.px55.mb32
         div.item-title.font-size-20.mb28.black わかりやすいレッスン
         div.item-description.font-size-14
           p 勉強は理解できると楽しい。理解できないとつまらない。
@@ -119,7 +120,7 @@ app.block.dimgray.font-size-16
 
   div.example.relative.f.fh
     div.white.filter.absolute.width-100-per.height-100-per.f.fl.fm
-      div.sentence.width-60-per.px40
+      div.sentence.s-col12.m-col8.l-col8.px40
         div.title.font-size-32.mb32 GetItがなければ今の自分はありません
         div.description.font-size-14 "Webデザイナー"という職業に興味はあったものの、プログラミングが何なのか分からないままGetItを始めました。書いたコードがすぐに反映されるなど、初心者にもやさしく分かりやすいレッスンのおかげでプログラミングを楽しく学ぶことができ、いまではアシスタントデザイナーとして毎日コードを書いています。
     img.width-100-per.height-100-per.object-fit-cover(src="../images/lp/example.png")
@@ -141,7 +142,7 @@ app.block.dimgray.font-size-16
       div.column.mr20(each="{footers}")
         div.column-title.mb24 {title}
         div.items.font-size-12(each="{items}")
-          div.item.mb12 {item}
+          a.block.item.mb12 {item}
 
   script.
     this.footers = [
@@ -201,7 +202,19 @@ app.block.dimgray.font-size-16
     ];
   style(scoped).
     .filter {
-      background-color: rgba(0, 0, 0, 0.3)
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .z-index-999 {
+      z-index: 999;
+    }
+
+    .opacity-50-per {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .text-shadow {
+      text-shadow: 0px 2px 4px #000;
     }
 </script>
 
