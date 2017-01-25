@@ -1,1 +1,127 @@
-http://purecss.io/layouts/marketing/
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <title>${title}</title>
+    <meta name="description" content="${description}" />
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jade/1.11.0/jade.js'></script>
+    <!--
+    <script src='http://cdn.rawgit.com/pugjs/pug/1.11.0/runtime.js'></script>
+    -->
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/riot/2.6.3/riot+compiler.js'></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/riot/2.3.18/riot+compiler.js'></script>
+
+    <link rel="stylesheet" href="../high.css" />
+  </head>
+  <body>
+    <app title="{'lp-sample'}"></app>
+  </body>
+</html>
+
+
+<script type='riot/tag' template='jade'>
+app.block.dimgray.font-size-16
+  div.lp-top.f.fh.height-100-vh
+    img(src="../images/lp/top.png").width-100-per.height-100-vh.object-fit-cover.grey
+    div.lp-inner.absolute
+      div.mb30.block.mx32.white.min
+        h1.text-center さあ、プログラミングを始めよう
+        div.text-center
+          p プログラミングは素晴らしい力です。やらないのはもったいない。
+          p 悩んでいるなら、Progateでやってみよう。無料で始められる、初心者向け学習サイト
+      div.f.fh.mt30
+        div.button.rounded-10.text-center.bg-cornflowerblue.white.py16.px40 無料会員登録
+
+  div.introduction.py100.bg-ghostwhite
+      div.title.text-center.font-size-32.mb-70
+          div.mb20.black オンラインプログラミング学習サービス
+          div.mb20.black『 GetIt 』
+          div.small.font-size-16
+            p GetItはオンラインでプログラミングが学べるサービスです。
+            p 学び方で、結果は変わります。初心者でも学びやすい学習環境をご用意。
+
+      div.secound
+        div.row.f.min-height-500
+          div.item.width-50-per.f.fh
+            img.width-100-per.object-fit-cover(src="../images/lp/code.png")
+          div.item.width-50-per.f.fh.px40
+            div.item-inner
+              div.count.font-size-24.border-bottom.border-aquamarine.mb20.width-32 1.
+              div.title.font-size-24.mb20 イラスト中心のスライドで学ぶ
+              div.description.font-size-14　紙の本よりも直感的で、動画よりも学びやすい、「スライド学習」を採用しました。自分のペースで学習できること、復習しやすいことが強みです。
+        div.row.f
+          div.item.width-50-per.f.fh.px40
+              div.item-inner
+                div.count.font-size-24.border-bottom.border-aquamarine.mb20.width-32 2.
+                div.title.font-size-24.mb20 プログラムを書いて学ぶ
+                div.description.font-size-14　実際にプロダクトを創りながら学ぶから、使えるスキルが身につきます。ブラウザ上で、コードを書いて結果も確認。準備いらずで、すぐにプログラミングが実践できます。
+          div.item.width-50-per.f.fh
+            img.width-100-per.object-fit-cover(src="../images/lp/clock.png")
+
+  div.codawari.py100.text-center
+    div.title-inner.pb32
+      div.title.font-size-32.mb32.black レッスンへのこだわり
+      div.description.font-size-16
+        p 先生のいないオンライン学習だからこそ、レッスンの「質」に最大限のこだわりを持っています。
+        p 以下のミッションと、それを達成するための2つの約束を定めています。
+
+    div.catch-copy.font-size-40.aquamarine.my32 「初心者でも、独学できるレッスンを」
+
+    div.row.f.flex-around.py32
+      div.item.text-center.width-50-per.px55
+        div.item-title.font-size-20.mb28.black 実践的なレッスン
+        div.item-description.font-size-14
+          p 現実に活かせない学びは必要ありません。
+          p 実際にプロダクトを創りながら、自分一人でもそれが創れるようになるレッスンを提供します。
+
+      div.item.text-center.width-50-per.px55
+        div.item-title.font-size-20.mb28.black わかりやすいレッスン
+        div.item-description.font-size-14
+          p 勉強は理解できると楽しい。理解できないとつまらない。
+          p あらゆる「学び」が腹に落ちて、もっと学びたくなるレッスンを提供します。
+
+  div.course.py100.bg-ghostwhite
+    div.title-innner.text-center
+    div.item-inner.f.fh.height-60-vw.width-30-vw.py40.bg-white.box-shadow.width-28-per
+      div.item.text-center
+        div.item-title.mb16 HTML & CSS
+        div.image.f.fh.width-100-per.height-100.bg-white.mb28
+
+        div.f.fh
+          div.button.rounded-10.font-size-14.text-center.bg-aquamarine.white.py12.px28.box-shadow　コース詳細へ
+
+
+  div.mission.py100.text-center
+    div.title.font-size-32.aquamarine 初心者から、創れる人を生み出す
+    div.english.font-size-16.mb32.mt28.cornflowerblue LEARN TO CODE, LEARN TO BE CREATIVE.
+    div.mb30.mt32
+      p 初心者でもわかりやすく、挫折せずに学べること。
+      p そして、本物のスキルが身につき 「創れる」ようになること。
+    div.my30
+      p プログラミングで夢を叶えたい人が、本当に夢を叶えられるように、
+      p 私たちはこんな思いをGetItにこめています。
+    div.mt30
+      p プログラミングの世界へ踏み出すあなたを、私たちがサポートします。
+  div.example
+
+  div.start.bg-ghostwhite.py100.f.fh
+    div.start-inner
+      div.title-inner.text-center.font-size-24
+        p さっそく始めよう。
+        p 1分後、プログラミングの世界でお会いしましょう。
+      div.f.fh.mt30
+        div.button.rounded-10.text-center.bg-cornflowerblue.white.py16.px32.box-shadow 無料会員登録
+
+  div.footer
+</script>
+
+<script>
+  riot.mount('app');
+</script>
