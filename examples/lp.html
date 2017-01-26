@@ -80,20 +80,22 @@ app.block.dimgray.font-size-16
         p 先生のいないオンライン学習だからこそ、レッスンの「質」に最大限のこだわりを持っています。
         p 以下のミッションと、それを達成するための2つの約束を定めています。
 
-    div.catch-copy.font-size-40.aquamarine.my32 「初心者でも、独学できるレッスンを」
+    div.catch-copy.font-size-30.aquamarine.my32 「初心者でも、独学できるレッスンを」
 
     div.row.f.flex-around.py32
       div.item.s-col12.m-col6.l-col6.px55.mb32
-        div.item-title.font-size-20.mb28.black 実践的なレッスン
-        div.item-description.font-size-14
-          p 現実に活かせない学びは必要ありません。
-          p 実際にプロダクトを創りながら、自分一人でもそれが創れるようになるレッスンを提供します。
+        div.item-inner
+          div.item-title.font-size-20.mb28.black 実践的なレッスン
+          div.item-description.font-size-14
+            p 現実に活かせない学びは必要ありません。
+            p 実際にプロダクトを創りながら、自分一人でもそれが創れるようになるレッスンを提供します。
 
       div.item.s-col12.m-col6.l-col6.px55.mb32
-        div.item-title.font-size-20.mb28.black わかりやすいレッスン
-        div.item-description.font-size-14
-          p 勉強は理解できると楽しい。理解できないとつまらない。
-          p あらゆる「学び」が腹に落ちて、もっと学びたくなるレッスンを提供します。
+        div.item-inner
+          div.item-title.font-size-20.mb28.black わかりやすいレッスン
+          div.item-description.font-size-14
+            p 勉強は理解できると楽しい。理解できないとつまらない。
+            p あらゆる「学び」が腹に落ちて、もっと学びたくなるレッスンを提供します。
 
   div.course.py89.bg-ghostwhite.px16
     div.title.text-center.mb34
@@ -132,7 +134,7 @@ app.block.dimgray.font-size-16
       div.sentence.s-col12.m-col8.l-col8.px40
         div.title.font-size-32.mb32 GetItがなければ今の自分はありません
         div.description.font-size-14 "Webデザイナー"という職業に興味はあったものの、プログラミングが何なのか分からないままGetItを始めました。書いたコードがすぐに反映されるなど、初心者にもやさしく分かりやすいレッスンのおかげでプログラミングを楽しく学ぶことができ、いまではアシスタントデザイナーとして毎日コードを書いています。
-    img.width-100-per.height-100-per.object-fit-cover(src="../images/lp/example.png")
+    img.min-height-400.width-100-per.object-fit-cover(src="../images/lp/example.png")
 
   div.start.px20.bg-ghostwhite.py89.f.fh
     div.start-inner
@@ -271,8 +273,6 @@ app.block.dimgray.font-size-16
       }
     ];
   style(scoped type="less").
-
-
 
     .z-index-999 {
       z-index: 999;
