@@ -28,9 +28,9 @@
 
 <script type='riot/tag' template='jade'>
 app.block.dimgray.font-size-16
-  div.header.relative.height-100.z-index-999.opacity-50-per
+  div.header.relative.z-index-999.opacity-50-per
     div.inner-header.fixed.width-100-per.bg-white.tranceparent-white.height-100.f.fm.px16.flex-between.box-shadow
-      img.height-80-per.rounded-6.box-shadow(src="../images/lp/getitLogo.png")
+      img.height-16-vw.max-height-80.rounded-6.box-shadow(src="../images/lp/getitLogo.png")
       div.button-inner.f.fh
         div.mr32.black.bold ログイン
         div.border-cornflowerblue.rounded-6.white.bg-cornflowerblue.px16.py10.box-shadow.button-opacity 無料会員登録
@@ -38,7 +38,7 @@ app.block.dimgray.font-size-16
   div.lp-top.f.fh.height-100-vh.relative.f.fh
     img(src="../images/lp/top.png").absolute.width-100-per.height-100-vh.object-fit-cover.grey
     div.filter.absolute.width-100-per.height-100-per
-    div.lp-inner.absolute
+    div.lp-inner.absolute.mt50
       div.mb30.block.mx32.white
         h1.text-center.font-size-32.mb24.text-shadow さあ、プログラミングを始めよう
         div.text-center
@@ -47,9 +47,7 @@ app.block.dimgray.font-size-16
       div.f.fh
         div.button.rounded-10.text-center.bg-cornflowerblue.white.py16.px40.box-shadow.button-opacity 無料会員登録
 
-
-
-  div.introduction.py100.bg-ghostwhite.px70
+  div.introduction.py89.bg-ghostwhite.px16
       div.title.text-center.font-size-32.mb-70
           div.mb20.black オンラインプログラミング学習サービス
           div.mb20.black『 GetIt 』
@@ -75,7 +73,7 @@ app.block.dimgray.font-size-16
           div.item.width-50-per.f.fh
             img.width-100-per.object-fit-cover(src="../images/lp/clock.png")
 
-  div.codawari.py100.text-center.px70
+  div.codawari.py89.text-center.px16
     div.title-inner.pb32
       div.title.font-size-32.mb32.black レッスンへのこだわり
       div.description.font-size-16
@@ -97,17 +95,27 @@ app.block.dimgray.font-size-16
           p 勉強は理解できると楽しい。理解できないとつまらない。
           p あらゆる「学び」が腹に落ちて、もっと学びたくなるレッスンを提供します。
 
-  div.course.py100.bg-ghostwhite
-    div.title-innner.text-center
-    div.item-inner.f.fh.height-60-vw.width-30-vw.py40.bg-white.box-shadow.width-28-per
-      div.item.text-center
-        div.item-title.mb16 HTML & CSS
-        div.image.f.fh.width-100-per.height-100.bg-white.mb28
-          div.circle.border.width-100-per.height-100-per
-        div.f.fh
-          div.button.rounded-10.font-size-14.text-center.bg-aquamarine.white.py12.px28.box-shadow　コース詳細へ
+  div.course.py89.bg-ghostwhite.px16
+    div.title.text-center.mb34
+      div.title-main.font-size-32.mb34
+        p あなたにあったレッスンが
+        p きっと見つかる
+      div.title-sub.font-size-16
+        p 全10コース、 45レッスン。
+        p 最初に学ぶべき知識は、ここにあります。
+    div.items.f.flex-between.flex-wrap
+      div.item.text-center.s-col6.m-col4.l-col3.px12.mb20(each="{courses}")
+        div.item-border.f.fh.height-40-vw.max-height-300.min-height-256.bg-white.box-shadow.rounded-3.px8
+          div.item-inner
+            div.item-title.mb16 {title}
+            div.image.f.fh.width-100-per.height-100.bg-white.mb28
+              div.circle.width-80.height-80(style="background-color: {button_color}")
+            div.f.fh
+              div.button.rounded-10.font-size-14.text-center.bg-aquamarine.white.py12.px20.box-shadow.button-opacity(style="background-color: {button_color}")　コース詳細へ
+      div.item.text-center.s-col6.m-col4.l-col3.px12.mb20
+      div.item.text-center.s-col6.m-col4.l-col3.px12.mb20
 
-  div.mission.py100.text-center
+  div.mission.py89.px16.text-center
     div.title.font-size-32.aquamarine 初心者から、創れる人を生み出す
     div.english.font-size-16.mb32.mt28.cornflowerblue LEARN TO CODE, LEARN TO BE CREATIVE.
     div.mb30.mt32
@@ -126,7 +134,7 @@ app.block.dimgray.font-size-16
         div.description.font-size-14 "Webデザイナー"という職業に興味はあったものの、プログラミングが何なのか分からないままGetItを始めました。書いたコードがすぐに反映されるなど、初心者にもやさしく分かりやすいレッスンのおかげでプログラミングを楽しく学ぶことができ、いまではアシスタントデザイナーとして毎日コードを書いています。
     img.width-100-per.height-100-per.object-fit-cover(src="../images/lp/example.png")
 
-  div.start.bg-ghostwhite.py100.f.fh
+  div.start.px20.bg-ghostwhite.py89.f.fh
     div.start-inner
       div.title-inner.text-center.font-size-24
         p さっそく始めよう。
@@ -135,16 +143,17 @@ app.block.dimgray.font-size-16
         div.button.rounded-10.text-center.bg-cornflowerblue.white.py16.px32.box-shadow.button-opacity 無料会員登録
           div.width-100-per.height-100-per.rounded-10.bg-white
 
-  div.footer.pb32.bg-white.f
-    div.column.width-30-vw.relative.f.fh
-      div.text-center
-        img.width-50-per.rounded-6(src="../images/lp/getitLogo.png")
-        div.font-size-8 2017 GetIt, Inc
-    div.inner-footer.f.mt70
-      div.column.mr20(each="{footers}")
-        div.column-title.mb24 {title}
-        div.items.font-size-12(each="{items}")
-          a.block.item.mb12 {item}
+  div.footer.pb32.bg-white.f.fh.py60.px16
+    div.f
+      div.column.small-hide.width-20-vw.max-height-80.relative.f.fc.mr16
+        div.text-center
+          img.height-100-per.object-fit-cover.rounded-6(src="../images/lp/getitLogo.png")
+          div.font-size-8.mt32 &copy;2017 GetIt,Inc.
+      div.inner-footer.f.text-center
+        div.column.mx8(each="{footers}")
+          div.column-title.mb24 {title}
+          div.items.font-size-11(each="{items}")
+            a.block.item.mb12 {item}
 
   script.
     this.footers = [
@@ -201,6 +210,64 @@ app.block.dimgray.font-size-16
           },
         ],
       },
+    ];
+
+    this.courses = [
+      {
+        title:'HTML & CSS',
+        img: '',
+        button_color: "#4ccfc9",
+      },
+      {
+        title:'JavaScript',
+        img: '',
+        button_color: '#f5d836',
+      },
+      {
+        title:'jQuery',
+        img: '',
+        button_color: '#e4df45',
+      },
+      {
+        title:'Ruby',
+        img: '',
+        button_color: '#ff7f8c',
+      },
+      {
+        title:'Ruby on Rails',
+        img: '',
+        button_color: '#ff8db3',
+      },
+      {
+        title:'PHP',
+        img: '',
+        button_color: '#c6baea',
+      },
+      {
+        title:'Java',
+        img: '',
+        button_color: '#d2ae78',
+      },
+      {
+        title:'Python',
+        img: '',
+        button_color: '#72daff',
+      },
+      {
+        title:'Swift',
+        img: '',
+        button_color: '#ffb330',
+      },
+      {
+        title:'Command Line',
+        img: '',
+        button_color: '#2dd65c',
+      },
+      {
+        title:'Git',
+        img: '',
+        button_color: '#ff8936',
+      }
     ];
   style(scoped type="less").
     .filter {
