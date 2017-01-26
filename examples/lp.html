@@ -143,17 +143,18 @@ app.block.dimgray.font-size-16
         div.button.rounded-10.text-center.bg-cornflowerblue.white.py16.px32.box-shadow.button-opacity 無料会員登録
           div.width-100-per.height-100-per.rounded-10.bg-white
 
-  div.footer.pb32.bg-white.f.fh.py60.px16
-    div.f
-      div.column.small-hide.width-20-vw.max-height-80.relative.f.fc.mr16
+  div.footer.pb32.bg-white.f.py60.px32
+    div.f.fc.width-100-per
+      div.column.small-hide.width-20-vw.max-height-80.relative.f.fc
         div.text-center
           img.height-100-per.object-fit-cover.rounded-6(src="../images/lp/getitLogo.png")
           div.font-size-8.mt32 &copy;2017 GetIt,Inc.
-      div.inner-footer.f.text-center
-        div.column.mx8(each="{footers}")
-          div.column-title.mb24 {title}
-          div.items.font-size-11(each="{items}")
-            a.block.item.mb12 {item}
+      div.inner-footer.f.flex-wrap.flex-auto.text-center
+        div.column.s-col12.m-col3.l-col3(each="{footers}")
+          div.column-inner.mx8.pb32
+            div.column-title.mb24.black {title}
+            div.items.font-size-12(each="{items}")
+              a.block.item.mb12 {item}
 
   script.
     this.footers = [
