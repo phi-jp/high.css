@@ -107,13 +107,13 @@ app.block.dimgray.font-size-16
         p 最初に学ぶべき知識は、ここにあります。
     div.items.f.flex-between.flex-wrap
       div.item.text-center.s-col6.m-col4.l-col3.px12.mb20(each="{courses}")
-        div.item-border.f.fh.height-40-vw.max-height-300.min-height-256.bg-white.box-shadow.rounded-3.px8
+        div.item-border.f.fh.height-40-vw.max-height-300.min-height-256.bg-white.rounded-3.px8
           div.item-inner
             div.item-title.mb16 {title}
             div.image.f.fh.width-100-per.height-100.bg-white.mb28
               div.circle.width-80.height-80(style="background-color: {button_color}")
             div.f.fh
-              div.button.rounded-10.font-size-14.text-center.bg-aquamarine.white.py12.px20.box-shadow.button-opacity(style="background-color: {button_color}")　コース詳細へ
+              div.button.rounded-10.font-size-14.text-center.bg-aquamarine.white.py12.px20.button-opacity(style="background-color: {button_color}")　コース詳細へ
       div.item.text-center.s-col6.m-col4.l-col3.px12.mb20
       div.item.text-center.s-col6.m-col4.l-col3.px12.mb20
 
@@ -158,7 +158,7 @@ app.block.dimgray.font-size-16
           div.column-inner.mx8.pb32
             div.column-title.mb24.black {title}
             div.items.font-size-12(each="{items}")
-              a.block.item.mb12 {item}
+              a.block.item.mb12(href='') {item}
         div.font-size-8.text-center.s-col12.middle-hide.large-hide.mt55 &copy;2017 GetIt,Inc.
   script.
     this.footers = [
