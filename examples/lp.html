@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
-    <title>${title}</title>
+    <title>LP sample</title>
     <meta name="description" content="${description}" />
 
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jade/1.11.0/jade.js'></script>
@@ -29,11 +29,11 @@
 <script type='riot/tag' template='jade'>
 app.block.dimgray.font-size-16
   div.header.relative.z-index-999
-    div.inner-header.fixed.width-100-per.bg-white.tranceparent-white.height-100.f.fm.px16.flex-between.box-shadow
-      img.height-16-vw.max-height-80.rounded-6.box-shadow(src="../images/lp/getitLogo.png")
+    div.inner-header.fixed.width-100-per.bg-white.tranceparent-white.height-100.f.fm.px16.flex-between
+      img.height-16-vw.max-height-80.rounded-6(src="../images/lp/getitLogo.png")
       div.button-inner.f.fh
         div.mr32.black.bold ログイン
-        div.border-cornflowerblue.rounded-6.white.bg-cornflowerblue.px16.py10.box-shadow.button-opacity 無料会員登録
+        div.border-cornflowerblue.rounded-6.white.bg-cornflowerblue.px16.py10.button-opacity 無料会員登録
 
   div.lp-top.f.fh.height-100-vh.relative.f.fh
     img(src="../images/lp/top.png").absolute.width-100-per.height-100-vh.object-fit-cover.grey
@@ -49,11 +49,11 @@ app.block.dimgray.font-size-16
 
   div.introduction.py89.bg-ghostwhite.px16
       div.title.text-center.font-size-32.mb-70
-          div.mb20.black オンラインプログラミング学習サービス
-          div.mb20.black『 GetIt 』
-          div.small.font-size-16
-            p GetItはオンラインでプログラミングが学べるサービスです。
-            p 学び方で、結果は変わります。初心者でも学びやすい学習環境をご用意。
+        div.mb20.black オンラインプログラミング学習サービス
+        div.mb20.black『 GetIt 』
+        div.small.font-size-16
+          p GetItはオンラインでプログラミングが学べるサービスです。
+          p 学び方で、結果は変わります。初心者でも学びやすい学習環境をご用意。
 
       div.secound
         div.row.mb89.mt70
@@ -66,10 +66,10 @@ app.block.dimgray.font-size-16
               div.description.font-size-14　紙の本よりも直感的で、動画よりも学びやすい、「スライド学習」を採用しました。自分のペースで学習できること、復習しやすいことが強みです。
         div.row.f
           div.item.width-50-per.f.fh.px40
-              div.item-inner
-                div.count.font-size-24.border-bottom.border-aquamarine.mb20.width-32 2.
-                div.title.font-size-24.mb20 プログラムを書いて学ぶ
-                div.description.font-size-14　実際にプロダクトを創りながら学ぶから、使えるスキルが身につきます。ブラウザ上で、コードを書いて結果も確認。準備いらずで、すぐにプログラミングが実践できます。
+            div.item-inner
+              div.count.font-size-24.border-bottom.border-aquamarine.mb20.width-32 2.
+              div.title.font-size-24.mb20 プログラムを書いて学ぶ
+              div.description.font-size-14　実際にプロダクトを創りながら学ぶから、使えるスキルが身につきます。ブラウザ上で、コードを書いて結果も確認。準備いらずで、すぐにプログラミングが実践できます。
           div.item.width-50-per.f.fh
             img.width-80-per.height-100-per.object-fit-cover.box-shadow(src="../images/lp/clock.png")
 
