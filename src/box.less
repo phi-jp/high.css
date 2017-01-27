@@ -1,45 +1,72 @@
-
 /*
+ * box
  * margin, padding
  */
 
-// padding
-.for(@nums, {
+.define-box(@prefix, @property) {
   // padding
-  .padding-@{value} { padding: @value * 1px; }
-  // padding-top
-  .padding-top-@{value} { padding-top: @value * 1px; }
-  // padding-right
-  .padding-right-@{value} { padding-right: @value * 1px; }
-  // padding-bottom
-  .padding-bottom-@{value} { padding-bottom: @value * 1px; }
-  // padding-left
-  .padding-left-@{value} { padding-left: @value * 1px; }
-  // padding-x
-  .padding-x-@{value} { padding-left: @value * 1px; padding-right: @value * 1px; }
-  // padding-y
-  .padding-y-@{value} { padding-top: @value * 1px; padding-bottom: @value * 1px; }
-});
+  .for(@nums, {
+    // all
+    .@{prefix}-@{value} { @{property}: @value * 1px; }
+    // top
+    .@{prefix}-top-@{value} { @{property}-top: @value * 1px; }
+    // right
+    .@{prefix}-right-@{value} { @{property}-right: @value * 1px; }
+    // bottom
+    .@{prefix}-bottom-@{value} { @{property}-bottom: @value * 1px; }
+    // left
+    .@{prefix}-left-@{value} { @{property}-left: @value * 1px; }
+    // x
+    .@{prefix}-x-@{value} {
+      @{property}-left: @value * 1px;
+      @{property}-right: @value * 1px;
+    }
+    // y
+    .@{prefix}-y-@{value} {
+      @{property}-top: @value * 1px;
+      @{property}-bottom: @value * 1px;
+    }
+  });
+}
+
+.define-box-shorthand(@prefix, @property) {
+  // padding
+  .for(@nums, {
+    // all
+    .@{prefix}@{value} { @{property}: @value * 1px; }
+    // top
+    .@{prefix}t@{value} { @{property}-top: @value * 1px; }
+    // right
+    .@{prefix}r@{value} { @{property}-right: @value * 1px; }
+    // bottom
+    .@{prefix}b@{value} { @{property}-bottom: @value * 1px; }
+    // left
+    .@{prefix}l@{value} { @{property}-left: @value * 1px; }
+    // x
+    .@{prefix}x@{value} { @{property}-left: @value * 1px; @{property}-right: @value * 1px; }
+    // y
+    .@{prefix}y@{value} { @{property}-top: @value * 1px; @{property}-bottom: @value * 1px; }
+  });
+}
+
+// padding
+.define-box(padding, padding);
+// @media @media-mobile {
+//   // .define-box(small-padding, padding) !important;
+//   .define-box-shorthand(s-p, padding) !important;
+// }
+// @media @media-tablet {
+//   .define-box(medium-padding, padding) !important;
+// }
+// @media @media-desktop {
+//   .define-box(large-padding, padding) !important;
+// }
 
 // margin
-.for(@nums, {
-  // margin
-  .margin-@{value} { margin: @value * 1px; }
-  // margin-top
-  .margin-top-@{value} { margin-top: @value * 1px; }
-  // margin-right
-  .margin-right-@{value} { margin-right: @value * 1px; }
-  // margin-bottom
-  .margin-bottom-@{value} { margin-bottom: @value * 1px; }
-  // margin-left
-  .margin-left-@{value} { margin-left: @value * 1px; }
-  // margin-x
-  .margin-x-@{value} { margin-left: @value * 1px; margin-right: @value * 1px; }
-  // margin-y
-  .margin-y-@{value} { margin-top: @value * 1px; margin-bottom: @value * 1px; }
-});
+.define-box(margin, margin);
 
 .margin-left-auto { margin-left: auto; }
 .margin-right-auto { margin-right: auto; }
 .margin-x-auto { .margin-left-auto; .margin-right-auto; }
+
 
