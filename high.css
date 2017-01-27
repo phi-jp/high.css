@@ -328,9 +328,19 @@ video {
 /*
  * reset
  */
+* {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+body {
+  margin: 0;
+}
 a {
   color: inherit;
   text-decoration: none;
+}
+img,
+svg {
+  max-width: 100%;
 }
 /*
  * method
@@ -378,6 +388,12 @@ a {
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
+}
+/*
+ * transition
+ */
+.transition {
+  transition: 256ms;
 }
 .box-shadow {
   box-shadow: 0px 0px 4px 0px #222;

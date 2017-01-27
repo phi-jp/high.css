@@ -26,9 +26,18 @@
  * reset
  */
 
+* {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+body {
+  margin: 0;
+}
 a {
   color: inherit;
   text-decoration: none;
+}
+img, svg {
+  max-width: 100%;
 }
 
 /*
@@ -96,6 +105,13 @@ a {
   overflow-scrolling: touch;
 }
 
+/*
+ * transition
+ */
+
+.transition {
+  transition: 256ms;
+}
 
 // shadow
 .box-shadow {
